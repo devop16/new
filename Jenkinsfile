@@ -11,12 +11,11 @@ pipeline {
         stage('DevOps Approval') {
           steps {
             echo 'Sucess'
-            error 'Error Found'
           }
         }
         stage('Reviewer') {
           steps {
-            error 'Fail'
+            echo 'sucess'
           }
         }
       }
@@ -36,6 +35,7 @@ pipeline {
         stage('Validator') {
           steps {
             echo 'Sucess'
+            error 'Error Found'
           }
         }
         stage('DevSecOps Approval') {
