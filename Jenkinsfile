@@ -6,7 +6,7 @@ pipeline {
         echo 'Push to next step'
       }
     }
-    stage('DevOps Approval') {
+    stage('Security Steps') {
       parallel {
         stage('DevOps Approval') {
           steps {
@@ -33,6 +33,16 @@ pipeline {
           }
         }
         stage('Validator') {
+          steps {
+            echo 'Sucess'
+          }
+        }
+        stage('DevSecOps Approval') {
+          steps {
+            echo 'Sucess'
+          }
+        }
+        stage('Team Lead approval') {
           steps {
             echo 'Sucess'
           }
