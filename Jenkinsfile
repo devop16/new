@@ -7,8 +7,17 @@ pipeline {
       }
     }
     stage('DevOps Approval') {
-      steps {
-        echo 'Sucess'
+      parallel {
+        stage('DevOps Approval') {
+          steps {
+            echo 'Sucess'
+          }
+        }
+        stage('Reviewer') {
+          steps {
+            error 'Fail'
+          }
+        }
       }
     }
     stage('QA') {
