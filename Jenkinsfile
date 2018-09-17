@@ -11,6 +11,7 @@ pipeline {
         stage('DevOps Approval') {
           steps {
             echo 'Sucess'
+            error 'Error Found'
           }
         }
         stage('Reviewer') {
